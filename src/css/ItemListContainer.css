@@ -1,0 +1,9 @@
+.ItemListContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #343a40;
+    border-radius: 0.5rem;
+    color: white;
+}
