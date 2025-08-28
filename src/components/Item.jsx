@@ -1,12 +1,19 @@
-import React from "react";
-import Item from "./Item";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import {Link} from 'react-router-dom';
 
-const ItemList = ({data}) => {
-    return(
-        <div className='d-flex justify-content-between flex-wrap align-items-center gap-2' >
-            {data.map((productos)=> <Item key={productos.id} productos={productos}/>)}
-        </div>
-    )
+const Item = ({ productos }) => {
+    return (
+        <Card className='justify-content-center align-items-center'>
+            <Card.Img variant="top" src={productos.img} style={{width:'12rem', height:'12rem',}}/>
+            <Card.Body>
+                <Card.Title>{productos.name}</Card.Title>
+                <Card.Text>
+                    ${productos.price},00
+                </Card.Text>
+                <Link to={'/item/'+productos.id} className='btn btn-primary'>Ver más</Link>
+            </Card.Body>
+        </Card>)
 }
 
-export default ItemList
+export default Item;

@@ -1,102 +1,36 @@
 const productos = [
     {
-        id:1,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
+        id:'01',
+        name:"Ezviz c6n",
+        price: 92000,
+        description: 'lorem lorem lorem',
+        img:"https://i.postimg.cc/vTLXjsbf/c6n.png",
+        stock: 15, 
+        category:"camaras"},
     {
-        id:2,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
+        id:'02',
+        name:"Garnet Innova",
+        price: 36700,
+        description: 'lorem lorem lorem',
+        img:"https://i.postimg.cc/Dy6BPnCK/Paneles-Inalambricos-Hub.png",
+        stock: 5, 
+        category:"alarmas"},
     {
-        id:3,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
+        id:'03',
+        name:"Taladro Atornillador Ingoc",
+        price: 19200,
+        description: 'lorem lorem lorem',
+        img:"https://i.postimg.cc/hGkrtjGV/Taladro-Atornillador.jpg",
+        stock: 7, 
+        category:"herramientas"},
     {
-        id:4,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:5,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:6,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:7,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:8,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:9,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:10,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:11,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:12,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:13,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
-    {
-        id:14,
-        name:" ",
-        price: 1,
-        img:" ",
-        stock: 1, 
-        category:" "},
+        id:'04',
+        name:"Cable tipo taller",
+        price: 1920,
+        description: 'lorem lorem lorem',
+        img:"https://i.postimg.cc/VNrgwMzY/Tipo-Taller.webp",
+        stock: 7, 
+        category:"electricidad"},
 ]
 
 //promesa de los productos
@@ -114,4 +48,11 @@ export const getProductos = () => {
     })
 }
 
-export default getProductos
+export const getItem = (id) => {
+    return new Promise ((resolve) => {
+        setTimeout (()=>{
+            let detalle = productos.find((item) => item.id === id)
+            resolve(detalle)
+        }, 2000)
+    })
+}

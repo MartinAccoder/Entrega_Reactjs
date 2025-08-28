@@ -3,7 +3,12 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: #343a40;
+    background-color: #05192e;
     border-radius: 0.5rem;
+}
+h1 {
     color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }

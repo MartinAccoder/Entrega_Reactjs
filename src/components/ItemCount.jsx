@@ -14,8 +14,8 @@ const ItemCount = () => {
         <div>
             <h2>Contador</h2>
             <h3>{count}</h3>
-            <button onClick={sumar}>+</button>
-            <button onClick={restar}>-</button>
+            <button className='btn btn-danger' onClick={restar}>-</button>
+            <button className='btn btn-success' onClick={sumar}>+</button>
         </div>
     )
 }
