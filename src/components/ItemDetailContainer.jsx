@@ -14,8 +14,10 @@ const ItemDetailContainer = () => {
     },[id])
 
     return(
-        <div className= 'd-flex justify-content-center align-items-center m-4 p-4 border border-3 border-dark rounded-3'>
-            <ItemDetail detalle ={detalle}/>
+        <div className='d-flex justify-content-center align-items-center m-4'>
+            <div className='bg-white border rounded-3 p-3' style={{ maxWidth: '900px', width: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
+                <ItemDetail detalle={detalle} />
+            </div>
         </div>
     )
 }

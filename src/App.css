@@ -1,0 +1,42 @@
+/* Fondo global para toda la aplicación.
+	 Opciones:
+	 - Usar color sólido: cambia --app-bg-color.
+	 - Usar imagen de fondo: coloca la imagen en public/ y usa url('/nombre.jpg').
+*/
+
+:root{
+	--app-bg-color: #05192e; /* color por defecto */
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--app-bg-color);
+	/* Descomenta la siguiente línea para usar una imagen de fondo (archivo en public/): */
+	/* background-image: url('/Paneles.jpg'); */
+	background-repeat: no-repeat;
+	background-size: cover; /* cover para que cubra toda la pantalla */
+	background-position: center center;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Clase utilitaria para contenedores con fondo translúcido (opcional) */
+.app-container {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Si quieres un fondo en el área principal (sin cubrir la navbar), aplica esta clase al contenedor principal */
+.main-background {
+	padding: 1rem;
+	background-color: rgba(255,255,255,0.6); /* ejemplo semitransparente sobre la imagen */
+	border-radius: 8px;
+}
+
+/* Ajustes menores para evitar que imágenes globales del proyecto (ej: NavBar.img) crezcan demasiado) */
+img { max-width: 100%; height: auto; }

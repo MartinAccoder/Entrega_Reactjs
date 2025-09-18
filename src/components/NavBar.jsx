@@ -8,12 +8,10 @@ const NavBar = () => {
     </NavLink>
         <NavLink to='/' className="AnchorBar">Todos los Productos
         </NavLink>
-        <NavLink to='/categoria/alarmas' className="AnchorBar">Alarmas
+        <NavLink to='/categoria/alarmas' className="AnchorBar">Sistemas de Alarmas
         </NavLink>
-        <NavLink to='/categoria/camaras' className="AnchorBar">Camaras
-          </NavLink>   
-        <NavLink to='/categoria/electricidad' className="AnchorBar">Electricidad
-          </NavLink>   
+        <NavLink to='/categoria/camaras' className="AnchorBar">Cámaras de Seguridad
+          </NavLink>     
         <NavLink to='/categoria/herramientas' className="AnchorBar">Herramientas
           </NavLink>   
         <CartWidget/>   
