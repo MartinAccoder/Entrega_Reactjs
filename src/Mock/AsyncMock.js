@@ -1,16 +1,6 @@
-const productos = [
+export const productos = [ 
   {
-    id: "01",
-    name: "Ezviz C6N",
-    price: 92000,
-    description:
-      "IP WIFI | Interior | 1080P | Lente 4mm | IR 10m | Audio 2 vías | Detección De Movimiento| Modo suspensión | Modo Inspección | Patrullaje | MicroSD hasta 256g | Incluye fuente |",
-    img: "https://i.postimg.cc/vTLXjsbf/c6n.png",
-    stock: 15,
-    category: "camaras",
-  },
-  {
-    id: "02",
+    
     name: "Ezviz H1C",
     price: 92000,
     description:
@@ -20,7 +10,7 @@ const productos = [
     category: "camaras",
   },
   {
-    id: "03",
+    
     name: "Ezviz H3C",
     price: 92000,
     description:
@@ -30,7 +20,7 @@ const productos = [
     category: "camaras",
   },
   {
-    id: "04",
+    
     name: "Ezviz H8C",
     price: 92000,
     description:
@@ -40,7 +30,7 @@ const productos = [
     category: "camaras",
   },
   {
-    id: "05",
+    
     name: "Ezviz H9C",
     price: 92000,
     description:
@@ -50,7 +40,7 @@ const productos = [
     category: "camaras",
   },
   {
-    id: "06",
+    
     name: "Intelbras ELC6012",
     price: 92000,
     description:
@@ -60,7 +50,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "07",
+    
     name: "Intelbras AMT 1000 Smart",
     price: 92000,
     description: "lorem lorem lorem",
@@ -69,7 +59,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "08",
+    
     name: "Garnet Innova PC-200",
     price: 36700,
     description: "lorem lorem lorem",
@@ -78,7 +68,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "09",
+    
     name: "Garnet PC-900G LCD",
     price: 36700,
     description: "lorem lorem lorem",
@@ -87,7 +77,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "10",
+    
     name: "Garnet PC-900G LCD RF ",
     price: 36700,
     description: "lorem lorem lorem",
@@ -96,7 +86,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "11",
+    
     name: "Garnet Teclado G-LCD732RF",
     price: 36700,
     description: "lorem lorem lorem",
@@ -105,7 +95,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "12",
+    
     name: "Garnet Teclado G-LCD732",
     price: 36700,
     description: "lorem lorem lorem",
@@ -114,7 +104,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "13",
+    
     name: "Garnet Teclado G-LED732",
     price: 36700,
     description: "lorem lorem lorem",
@@ -123,7 +113,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "14",
+    
     name: "Garnet Sensor Digi Wireless DGW-500-PET",
     price: 36700,
     description: "lorem lorem lorem",
@@ -132,7 +122,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "15",
+    
     name: "Garnet Sensor Magnético Inalámbrico DGM-200",
     price: 36700,
     description: "lorem lorem lorem",
@@ -141,7 +131,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "16",
+    
     name: "Garnet Control Remoto TX-500 ",
     price: 36700,
     description: "lorem lorem lorem",
@@ -150,7 +140,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "17",
+    
     name: "Marshall 4G ",
     price: 36700,
     description:
@@ -160,7 +150,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "18",
+    
     name: "Marshall GO PLUS",
     price: 36700,
     description:
@@ -170,7 +160,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "19",
+    
     name: "Marshall Sensor Iris Pet RF",
     price: 36700,
     description:
@@ -180,7 +170,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "20",
+    
     name: "Marshall Sensor Magnético Pulsar RF ",
     price: 36700,
     description:
@@ -190,7 +180,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "21",
+    
     name: "Marshall Control RemoTouch ",
     price: 36700,
     description:
@@ -200,7 +190,7 @@ const productos = [
     category: "alarmas",
   },
   {
-    id: "22",
+    
     name: "KIT 3 en 1  INGCO Rotomartillo, Amoladora y Linterana + 2 Baterias y Accesorios",
     price: 487490,
     description: "lorem lorem lorem",
@@ -209,7 +199,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "23",
+    
     name: "KIT 4 en 1 INGCO LLave de Impacto, Taladro Percutor, Amoladora, Reflector +2 Baterias y Accesorios",
     price: 443300,
     description: "lorem lorem lorem",
@@ -218,7 +208,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "24",
+    
     name: "Taladro Percutor INGCO con 66nm Bateria 2ah y Accesorios",
     price: 328850,
     description: "lorem lorem lorem",
@@ -227,7 +217,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "25",
+    
     name: "Guantes Reforzados INGCO",
     price: 15380,
     description: "lorem lorem lorem",
@@ -236,7 +226,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "26",
+    
     name: "Cargador Multiple de Baterias 6 Slots INGCO",
     price: 90700,
     description: "lorem lorem lorem",
@@ -245,7 +235,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "27",
+    
     name: "Pelacable Profesional INGCO con Buscapolo Inductivo",
     price: 30225,
     description: "lorem lorem lorem",
@@ -254,7 +244,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "28",
+    
     name: "Bolso Porta Herramientas INGCO",
     price: 24180,
     description: "lorem lorem lorem",
@@ -263,7 +253,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "29",
+    
     name: "KIT INGCO Taladro y LLave de impacto, 2 Baterias 2ah-16v, Cargador y Accesorios",
     price: 221587,
     description: "lorem lorem lorem",
@@ -272,7 +262,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "30",
+    
     name: "KIT INGCO 3 en 1 Taladro Percutor, Rotomartillo, Amoladora, 2 Baterias 4ah-12v Cargador y Accesorios",
     price: 487490,
     description: "lorem lorem lorem",
@@ -281,7 +271,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "31",
+    
     name: "Amoladora INGCO 1000w, 2 Baterias 4ah, Cargador y Accesorios",
     price: 265900,
     description: "lorem lorem lorem",
@@ -290,7 +280,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "32",
+    
     name: "LLave de Impacto INGCO 400nm Sin Bateria ni Cargador",
     price: 155110,
     description: "lorem lorem lorem",
@@ -299,7 +289,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "33",
+    
     name: "Taladro INGCO Atornillador 55nm +2 Bateria 20v 2ah, Accesorios y Cargador",
     price: 177270,
     description: "lorem lorem lorem",
@@ -308,7 +298,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "34",
+    
     name: "KIT INGCO Destornilladores 26 Piezas",
     price: 67675,
     description: "lorem lorem lorem",
@@ -317,7 +307,7 @@ const productos = [
     category: "herramientas",
   },
   {
-    id: "35",
+    
     name: "Linterna INGCO Sin Bateria ni Cargador",
     price: 77555,
     description: "lorem lorem lorem",

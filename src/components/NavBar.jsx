@@ -13,7 +13,7 @@ const NavBar = () => {
         <NavLink to='/categoria/camaras' className="AnchorBar">Cámaras de Seguridad
           </NavLink>     
         <NavLink to='/categoria/herramientas' className="AnchorBar">Herramientas
-          </NavLink>   
+          </NavLink> 
         <CartWidget/>   
     </nav>
   );

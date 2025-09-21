@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* .formu {
+    background-color: rgb(87, 97, 97);
+    border-radius: .5rem;
+}
+ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgb(87, 97, 97);
+    border-radius: 2rem;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem
+}
