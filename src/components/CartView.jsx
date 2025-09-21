@@ -1,17 +1,32 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-//agregar al spam unidades contador funcional para sumar y restar unidades
+import Swal from "sweetalert2";
+
+
 const CartView = () => {
     const {cart,removeItem,clear, totalPrice} = useContext(CartContext)
+    const confirmacion= () =>{
+        Swal.fire({
+            position:'top-center',
+            title:'Quiere borrar el carrito?',
+            showDenyButton:true,
+            denyButtonText:'NO',
+            confirmButtonText:'SI'
+        }).then((result)=> {
+            if (result.isConfirmed){
+                clear()
+            }
+        })
+    }
     return (
         <div>
             <h1 style={{color:'white'}}>Tu Carrito</h1>
-            <div>
+            <div className="contenedorCart">
                 {
                     cart.map((compra) =>
-                        <div key={compra.id} style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', border: '1px solid black', margin: '10px', background: 'white' }}>
-                            <img src={compra.img} alt={compra.name} style={{ width:'10rem'}}/>
+                        <div key={compra.id} >
+                            <img src={compra.img} alt={compra.name}/>
                             <h2>{compra.name}</h2>
                             <h2>${compra.price}</h2>
                             <h2>Unidades: {compra.quantity}</h2> 
@@ -22,9 +37,9 @@ const CartView = () => {
             </div>
         {}
         <h1 style={{color:'white'}}> Total a pagar: ${totalPrice()}</h1>
-        <div style={{display:'flex', justifyContent:'space-between', alignContent:'center'}}>
-            <button className="btn btn-danger" onClick={()=> clear()}>Vaciar Carrito</button>
-            <Link to='/checkout' className="btn btn-dark">Comprar</Link>
+        <div className="cont botonCart">
+            <button className="btn btn-danger" onClick={confirmacion}>Vaciar Carrito</button>
+            <Link to='/checkout' className="btn btn-success">Comprar</Link>
         </div>
         </div>
     )

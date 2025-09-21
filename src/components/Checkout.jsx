@@ -5,6 +5,8 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import EmptyCart from "./CartEmpty";
 import { Link } from "react-router-dom";
 import '../css/FormStyle.css';
+import Swal from "sweetalert2";
+
 
 const Checkout = () => {
     const  [buyer, setBuyer]  = useState({ })
@@ -25,9 +27,19 @@ const Checkout = () => {
         e.preventDefault()
 
         if (!buyer.name || !buyer.lastname || !buyer.address || !buyer.email) {
-            //poner alerr de que complete todos los campos de biblioteca
+            Swal.fire({
+                position:'top',
+                title:'Complete los campos',
+                time:1500,
+                icon:'warning'
+            })
         } else if (buyer.email !== validMail) {
-            //poner alerta de que los mails no coinciden de biblioteca
+            Swal.fire({
+                position:'top',
+                time:1500,
+                title:'Los emails no coinciden',
+                icon:'error'
+            })
         } else {
             let order = {
                 coprador: buyer,
@@ -58,9 +70,9 @@ const Checkout = () => {
             </div>
                 :
                 <div className="formu">
-                    <h1>Completar el formulario</h1>
+                    <h1 className="formul">Completar el formulario</h1>
                     <form onSubmit={compraTerminada} >
-                        <input placeholder='Ingrese su nombre' name='name' className="fomr-control" type="text" onChange={buyerData} />
+                        <input placeholder='Ingrese su nombre' name='name' className="fomr-control" type="text" onChange={buyerData}></input>
                         <input placeholder='Ingrese su apellido' name='lastname' className="fomr-control" type="text" onChange={buyerData} />
                         <input placeholder='Ingrese su direccion' name='address' className="fomr-control" type="text" onChange={buyerData} />
                         <input placeholder='Ingrese su email' name='email' className="fomr-control" type="email" onChange={buyerData} />

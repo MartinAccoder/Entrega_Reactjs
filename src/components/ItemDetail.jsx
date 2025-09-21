@@ -2,6 +2,9 @@ import React, {useContext, useState} from "react";
 import ItemCount from "./ItemCount";
 import { CartContext } from "../context/CartContext";
 import {Link} from "react-router-dom";
+import '../css/ItemDetail.css'
+import Swal from "sweetalert2";
+import { Icons } from "react-toastify";
 
 
 const ItemDetail = ({detalle}) => {
@@ -13,13 +16,21 @@ const ItemDetail = ({detalle}) => {
     const onAdd = (cantidad) => {
         setPurchased(true);
         addItem(detalle, cantidad);
+        Swal.fire({
+            title:'Se agrego al carrito!',
+            position:'top-center',
+            icon: 'success',
+            showCancelButton:false,
+            showConfirmButton:false,
+            timer:2000,           
+        })
         console.log(detalle, cantidad);
     }
 
     return(
-        <div className="text-center border p-4 m-4 bg-light ">
+        <div className="detalle">
             <h1>{detalle.name}</h1>
-            <img src={detalle.img} alt={detalle.name} style={{width: '30%', height:'25%'}}/>
+            <img src={detalle.img} alt={detalle.name} style={{width: '30%', height:'50%'}}/>
             <h2>{detalle.description}</h2>
             <p>${detalle.price},00</p>
             <p>Disponibles: {detalle.stock}</p>

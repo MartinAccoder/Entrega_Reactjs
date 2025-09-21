@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import '../css/ItemListContainer.css';
-import { getProductos, productos } from '../Mock/AsyncMock';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import LoaderComponent from './LoaderComponent';
@@ -33,18 +32,10 @@ const ItemListContainer = ({mensaje}) => {
         .catch((error) => console.log(error)) 
         .finally(() => setLoader(false));      
     },[category]) 
-        /*  ---funcion para el boton de subir productos---
-        const subirData = () => {
-            console.log("subiendo data a firebase")
-            const collectionAagregar = collection(fs, 'productos')
-            productos.map( (prod) => {
-                addDoc(collectionAagregar, prod)})
-        } */
 
         return(
             <>
-            {/* ---boton para subir productos---
-             <button onClick={subirData}>Subir a firebase</button> */}
+            
             {loader 
                 ? <LoaderComponent />
                 :
